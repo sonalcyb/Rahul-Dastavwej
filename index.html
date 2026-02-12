@@ -10,6 +10,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
 body{background:#f4f7fb;color:#333;}
+
 header{background:#0d2d62;color:white;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;}
 header h1{font-size:22px;}
 nav a{color:white;text-decoration:none;margin-left:20px;font-weight:500;}
@@ -35,7 +36,6 @@ font-weight:600;margin:10px;display:inline-block;transition:0.3s;
 section{padding:60px 8%;}
 .section-title{text-align:center;font-size:28px;margin-bottom:40px;color:#0d2d62;}
 
-/* Services Neon */
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
 .card{
 background:white;padding:25px;border-radius:10px;
@@ -51,7 +51,6 @@ box-shadow:0 0 15px #d4af37,0 0 30px rgba(212,175,55,0.6);
 .card ul{list-style:none;}
 .card ul li{margin-bottom:8px;font-size:14px;}
 
-/* Why Neon */
 .why-section{background:#0d2d62;color:white;}
 .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;text-align:center;}
 .why div{
@@ -63,39 +62,86 @@ box-shadow:0 0 15px #d4af37,0 0 30px #d4af37,0 0 45px #d4af37;
 transform:translateY(-10px) scale(1.05);
 }
 
-/* Contact */
-.contact-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
-.contact-box{
-background:white;padding:30px;border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+/* Contact Section */
+.contact-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:stretch;
 }
-.contact-box h3{margin-bottom:20px;color:#0d2d62;}
-.contact-box p{margin-bottom:12px;}
-.contact-box a{color:#0d2d62;font-weight:600;text-decoration:none;}
+
+.contact-box{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+display:flex;
+flex-direction:column;
+}
+
+.contact-box h3{
+margin-bottom:20px;
+color:#0d2d62;
+text-align:center;
+}
+
+.contact-box p{margin-bottom:12px;font-size:14px;}
+
+.contact-box a{
+color:#0d2d62;
+font-weight:600;
+text-decoration:none;
+}
 .contact-box a:hover{color:#d4af37;}
 
-form input, form textarea{
-width:100%;padding:12px;margin-bottom:15px;
-border:1px solid #ccc;border-radius:5px;
+form input,
+form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:14px;
 }
-form button{
-background:#0d2d62;color:white;padding:12px 20px;
-border:none;border-radius:5px;cursor:pointer;
-}
-form button:hover{background:#d4af37;color:black;}
 
-iframe{width:100%;height:250px;border-radius:10px;margin-top:15px;}
+form input[type="file"]{
+padding:8px;
+background:#f9f9f9;
+}
+
+form button{
+background:#0d2d62;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+display:block;
+margin:10px auto 0 auto;
+width:70%;
+transition:0.3s;
+}
+form button:hover{
+background:#d4af37;
+color:black;
+}
 
 footer{background:#0d2d62;color:white;text-align:center;padding:15px;font-size:14px;}
 
-@media(max-width:900px){.contact-wrapper{grid-template-columns:1fr;}}
-@media(max-width:768px){.hero h2{font-size:28px;}}
+@media(max-width:900px){
+.contact-wrapper{grid-template-columns:1fr;}
+form button{width:100%;}
+}
+
+@media(max-width:768px){
+.hero h2{font-size:28px;}
+}
 </style>
 </head>
 <body>
 
 <header>
-<h1>Rahul Dastawej </h1>
+<h1>Rahul Dastawej</h1>
 <nav>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
@@ -108,9 +154,9 @@ footer{background:#0d2d62;color:white;text-align:center;padding:15px;font-size:1
 
 <a href="tel:+918800782126" class="btn btn-primary">Call Now</a>
 
-<a href="https://wa.me/918800782126?text=Namaste%20Rahul%20Dastavej%20Seva%20Kendra,%0A%0AMujhe%20aapki%20legal%20document%20services%20ke%20bare%20mein%20jankari%20chahiye.%20Kripya%20mujhe%20guide%20karein."
-target="_blank" class="btn btn-secondary">WhatsApp Now.</a>
-
+<a href="https://wa.me/918800782126" target="_blank" class="btn btn-secondary">
+WhatsApp Now
+</a>
 </section>
 
 <section id="services">
@@ -181,7 +227,7 @@ target="_blank" class="btn btn-secondary">WhatsApp Now.</a>
 
 <div class="contact-box">
 <h3>Contact Information</h3>
-<p><strong>Address:</strong> Gali no 9, Harphool Vihar Gali, Harphool Vihar, Jai Vihar, Baprola, New Delhi, Delhi, 110043</p>
+<p><strong>Address:</strong> Gali no 9, Harphool Vihar, Baprola, New Delhi - 110043</p>
 <p><strong>Phone:</strong> <a href="tel:+918800782126">+91-8800782126</a></p>
 <p><strong>WhatsApp:</strong> <a href="https://wa.me/918800782126" target="_blank">Click to Chat</a></p>
 <p><strong>Email:</strong> <a href="mailto:rahuldocuments2020@email.com">rahuldocuments2020@email.com</a></p>
@@ -198,25 +244,14 @@ target="_blank" class="btn btn-secondary">WhatsApp Now.</a>
 </form>
 
 </div>
-
 </div>
 </section>
 
 <footer>
 <p>Copyright © 2026 Rahul Dastawej</p>
 <p>All Rights Reserved</p>
-
-<p style="margin-top:10px; font-size:14px;">
-Website Designed by ❤️
-<a href="https://instagram.com/thesonal_11" 
-target="_blank" 
-style="color:#d4af37; font-weight:600; text-decoration:none; transition:0.3s;"
-onmouseover="this.style.textShadow='0 0 10px #d4af37'"
-onmouseout="this.style.textShadow='none'">
-@thesonal_11
-</a>
-</p>
 </footer>
+
 <script>
 document.getElementById("whatsappForm").addEventListener("submit", function(e){
 e.preventDefault();
